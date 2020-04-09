@@ -6,9 +6,9 @@ const Home = ({content}) => {
     return (
         <div className='home'>
             <Logo />
-            <section>
-                <div className="title">
-                    {content.title} }
+            <div class="home-content">
+                <div className="title title--red">
+                    {content.title}
                 </div>
                 <div className="body">
                     {content.content.map((block, i) => (
@@ -17,10 +17,10 @@ const Home = ({content}) => {
                         </p>
                     ))}
                 </div>
-                <a className="button" href="/">
-                    start
-                </a>
-            </section>
+                <div className="button button--red" href="/">
+                    <a href="/">Start </a>
+                </div>
+            </div>
         </div>
     )
 }
