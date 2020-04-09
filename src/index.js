@@ -5,10 +5,12 @@ import  {intro} from "./config";
 import Home from './pages/Home';
 
 import * as serviceWorker from './serviceWorker';
+import Results from './pages/Results';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Home content={intro} /> */}
+    <Results />
   </React.StrictMode>,
   document.getElementById('root')
 );

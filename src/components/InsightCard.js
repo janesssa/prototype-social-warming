@@ -1,11 +1,11 @@
 import React from 'react';
 
-const InsightCard = () => {
+const InsightCard = ({content}) => {
     return (
-        <div>
+        <div className='md-card'>
             {/* Image */}
-            <h6>Vraag</h6>
-            <p>Ons inzicht</p>
+            <h6>{content.title}</h6>
+            <p>{content.content}</p>
         </div>
     )
 }

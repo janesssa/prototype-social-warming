@@ -1,17 +1,43 @@
 import React from 'react';
 import InsightCard from '../components/InsightCard';
 
+import '../styles/results.scss'
+
 const insights = [
     {
         title: 'Vraag 1',
         content: 'Dit is ons inzicht over de vraag en gedoe.'
     },
     {
-        title: 'Vraag 1',
+        title: 'Vraag 2',
+        content: 'Dit is ons inzicht over de vraag en gedoe.'
+    },
+    {
+        title: 'Vraag 3',
         content: 'Dit is ons inzicht over de vraag en gedoe.'
     },
     {
         title: 'Vraag 1',
+        content: 'Dit is ons inzicht over de vraag en gedoe.'
+    },
+    {
+        title: 'Vraag 2',
+        content: 'Dit is ons inzicht over de vraag en gedoe.'
+    },
+    {
+        title: 'Vraag 3',
+        content: 'Dit is ons inzicht over de vraag en gedoe.'
+    },
+    {
+        title: 'Vraag 1',
+        content: 'Dit is ons inzicht over de vraag en gedoe.'
+    },
+    {
+        title: 'Vraag 2',
+        content: 'Dit is ons inzicht over de vraag en gedoe.'
+    },
+    {
+        title: 'Vraag 3',
         content: 'Dit is ons inzicht over de vraag en gedoe.'
     },
 ]
@@ -21,12 +47,14 @@ const Results = () => {
         <div>
             {/* Header */}
             {/* Subtitle */}
-            <h1>Jouw data, ons inzicht</h1>
-            <small>Jouw data waarde</small>
-            <span className='bg-number '></span>
+            <div className='filler'></div>
+            <h1 className='title'>Jouw data, ons inzicht</h1>
+            <span className='bg-number float-right'>€73</span>
+            <small className='float-right'>Jouw data waarde</small>
             <div className='carousel'>
-
-                <InsightCard />
+                {insights.map((insight, i) => (
+                    <InsightCard content={insight} key={i} />
+                ))}
             </div>
         </div>
     )
