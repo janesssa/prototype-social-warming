@@ -46,7 +46,6 @@ const Results = () => {
         <div>
             {/* Header */}
             {/* Subtitle */}
-            <div className='filler'></div>
             <h1 className='title'>Jouw data, ons inzicht</h1>
             <span className='float-right'>
                 <small>Jouw data waarde</small>

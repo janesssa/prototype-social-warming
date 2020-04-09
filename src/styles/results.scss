@@ -73,11 +73,30 @@ small {
     font-weight: 500;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
 }
 
-// Todo: delete
-.filler {
-    height: 200px;
+.header {
+    width: calc(100% - 200px);
+    height: 70px;
+    display: flex;
+    padding: 0 100px;
+    justify-content: space-between;
+
+}
+
+.progressbar, .inner-progressbar {
     width: 100%;
-    background: lightyellow; 
+    height: 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.progressbar {
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.inner-progressbar {
+    background: $mainColor;
+    z-index: 1;
 }
