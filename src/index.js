@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
+import './styles/results.scss';
 import  {intro} from "./config";
 import Home from './pages/Home';
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import InsightCard from '../components/InsightCard';
-
-import '../styles/results.scss'
+import '../styles/results.scss';
 
 const insights = [
     {
@@ -49,8 +48,10 @@ const Results = () => {
             {/* Subtitle */}
             <div className='filler'></div>
             <h1 className='title'>Jouw data, ons inzicht</h1>
-            <span className='bg-number float-right'>€73</span>
-            <small className='float-right'>Jouw data waarde</small>
+            <span className='float-right'>
+                <small>Jouw data waarde</small>
+                <span className='bg-number'>€73</span> 
+            </span>
             <div className='carousel'>
                 {insights.map((insight, i) => (
                     <InsightCard content={insight} key={i} />
