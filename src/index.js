@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
-import  intro from "./config";
+import  {intro} from "./config";
 import Home from './pages/Home';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home content={intro} />
+    {/* <Home content={intro} /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
