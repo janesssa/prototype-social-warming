@@ -9,6 +9,7 @@ import Header from './components/Header'
 
 import * as serviceWorker from './serviceWorker';
 import Results from './pages/Results';
+import Question from './pages/Question';
 
 ReactDOM.render(
   <Router>
@@ -19,6 +20,9 @@ ReactDOM.render(
       <Route path='/results'>
         <Header />
         <Results />
+      </Route>
+      <Route path='/question'>
+        <Question />
       </Route>
     </Switch>
   </Router>,
