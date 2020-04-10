@@ -15,6 +15,7 @@ ReactDOM.render(
     <Header />
     <Results />
   </React.StrictMode>,
+
   document.getElementById('root')
 );
 
