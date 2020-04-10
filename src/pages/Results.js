@@ -46,11 +46,13 @@ const Results = () => {
         <div>
             {/* Header */}
             {/* Subtitle */}
-            <h1 className='title'>Jouw data, ons inzicht</h1>
-            <span className='float-right'>
-                <small>Jouw data waarde</small>
-                <span className='bg-number'>€73</span> 
-            </span>
+            <div className='sm-header'>
+                <h1 className='title'>Jouw data, ons inzicht</h1>
+                <span className='float-right'>
+                    <small>Jouw data waarde</small>
+                    <span className='bg-number'>€73</span> 
+                </span>
+            </div>
             <div className='carousel'>
                 {insights.map((insight, i) => (
                     <InsightCard content={insight} key={i} />
