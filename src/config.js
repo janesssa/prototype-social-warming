@@ -10,11 +10,10 @@ export const intro = {
 export const questions = {
     food: {
         title: 'Eten',
-        questions: [
-            {
+        questions: {
+            1: {
                 question: 'Laat je graag eten thuis bezorgen?',
                 imgAnswers: false,
-                number: 1,
                 answers: [
                     {
                         answer: 'Zeker, het liefst zou ik elke dag bestellen!',
@@ -30,71 +29,68 @@ export const questions = {
                     },
                 ],                    
             },
-            {
+            2: {
                 question: 'Wat zie je tijdens een feestje het liefst op tafel staan?',
                 imgAnswers: true,
-                number: 2,
                 answers: [
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/food/Q2A1.png',
+                            src: '/assets/img/questions/Q2A1.png',
                             alt: 'Een plank met kaas, brood en druiven',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/food/Q2A2.png',
+                            src: '/assets/img/questions/Q2A2.png',
                             alt: 'Een plank fruit en brood',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/food/Q2A3.png',
+                            src: '/assets/img/questions/Q2A3.png',
                             alt: 'Pizza',
                           }
                     },
                 ],                    
             },
-            {
+            3: {
                 question: 'Welke beleg jij het liefst?',
                 imgAnswers: true,
-                number: 3,
                 answers: [
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/food/Q3A1.png',
+                            src: '/assets/img/questions/Q3A1.png',
                             alt: 'Bruinbrood',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/food/Q3A2.png',
+                            src: '/assets/img/questions/Q3A2.png',
                             alt: 'Stokbrood',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/food/Q3A3.png',
+                            src: '/assets/img/questions/Q3A3.png',
                             alt: 'Witbrood',
                           }
                     },
                 ],                  
             },
-        ]
+        },
     },
     sleep: {
         title: 'Slaap',
-        questions: [
-            {
+        questions: {
+            4: {
                 question: 'Heb je afgelopen nacht lekker geslapen? ',
                 imgAnswers: false,
-                number: 4,
                 answers: [
                     {
                         answer: 'Ja, eigenlijk wel lekker.',
@@ -110,43 +106,41 @@ export const questions = {
                     },
                 ],                    
             },
-            {
+            5: {
                 question: 'Wat is je favorite slaaphouding',
                 imgAnswers: true,
-                number: 5,
                 answers: [
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/sleep/Q2A1.png',
+                            src: '/assets/img/questions/Q5A1.png',
                             alt: 'Buik',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/sleep/Q2A2.png',
+                            src: '/assets/img/questions/Q5A2.png',
                             alt: 'Zij',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/sleep/Q2A3.png',
+                            src: '/assets/img/questions/Q5A1.png',
                             alt: 'Rug',
                           }
                     },
                 ],                    
             },
-        ]
+        },
     },
     sport: {
         title: 'Sport',
-        questions: [
-            {
+        questions: {
+            6: {
                 question: 'Beschouw je jezelf als blessure gevoelig?',
                 imgAnswers: false,
-                number: 6,
                 answers: [
                     {
                         answer: 'Ik heb een (zware) blessure (gehad).',
@@ -162,43 +156,41 @@ export const questions = {
                     },
                 ],                    
             },
-            {
+            7: {
                 question: 'Hoe sport jij het liefst',
                 imgAnswers: true,
-                number: 7,
                 answers: [
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/sport/Q2A1.png',
+                            src: '/assets/img/questions/Q7A1.png',
                             alt: 'Buiten joggen',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/sport/Q2A2.png',
+                            src: '/assets/img/questions/Q7A2.png',
                             alt: 'sportschool',
                           }
                     },
                     {
                         value: 0,
                         img: {
-                            src: '/img/questions/sport/Q2A3.png',
+                            src: '/assets/img/questions/Q7A3.png',
                             alt: 'Op de bank gamen',
                           }
                     },
                 ],                    
             },
-        ]
+        },
     },
     misc: {
         title: 'Overige',
-        questions: [
-            {
+        questions: {
+            8: {
                 question: 'Rook je wel eens?',
                 imgAnswers: false,
-                number: 8,
                 answers: [
                     {
                         answer: 'Ja ik ben een frequente roker.',
@@ -218,10 +210,9 @@ export const questions = {
                     },
                 ],                    
             },
-            {
+            9: {
                 question: 'Doe je weleens een drankje?',
                 imgAnswers: false,
-                number: 9,
                 answers: [
                     {
                         answer: 'Ik ga regelmatig drinken met de maten.',
@@ -241,10 +232,9 @@ export const questions = {
                     },
                 ],                    
             },
-            {
+            10: {
                 question: 'Ga jij regelmatig met vrienden of kennissen iets leuks doen?',
                 imgAnswers: false,
-                number: 10,
                 answers: [
                     {
                         answer: 'Eigenlijk doe ik liever in m’n eentje dingen.',
@@ -268,10 +258,6 @@ export const questions = {
                     },
                 ],                    
             },
-        ]
+        },
     }
 }
-
-
-export const outro = [
-]
