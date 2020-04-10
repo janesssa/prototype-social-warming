@@ -23,17 +23,15 @@
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
     border-radius: 9px;
     margin: 20px;
-    padding: 50px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-evenly;
-    // Todo: does not work
-    transition: height 2s;
 }
 
 .card-img {
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
+    // width: 200px;
+    // height: 200px;
+    background: $mainColor;
 }
 
 .card-content {
@@ -106,11 +104,11 @@ small {
     position: absolute;
     left: 1050px;
     border: solid $mainColor;
-    border-width: 0 4px 4px 0;
+    border-width: 4px 4px 0 0;
     display: inline-block;
     padding: 8px;
     border-radius: 2px; 
-    transition: transform ease 700ms;
+    margin: 25px 0;
 }
 
 .up {
@@ -119,4 +117,8 @@ small {
 
 .down {
     transform: rotate(45deg);
+}
+
+p {
+    margin: 0;
 }

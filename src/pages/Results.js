@@ -11,7 +11,7 @@ const insights = [
     {
         id: 841,
         title: 'Vraag 2',
-        content: 'Dit is ons inzicht over de vraag en gedoe.'
+        content: 'Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.'
     },
     {
         id: 267,
@@ -26,7 +26,7 @@ const insights = [
     {
         id: 451,
         title: 'Vraag 2',
-        content: 'Dit is ons inzicht over de vraag en gedoe.'
+        content: 'Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.Dit is ons inzicht over de vraag en gedoe.'
     },
     {
         id: 348,
