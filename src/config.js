@@ -1,9 +1,9 @@
 export const intro = {
-    title: 'Een pakkende gave gevatte title',
+    title: 'Wat is jouw data waard?',
     content: [
-        "Wat is het dolor sit amet, consectetur adipiscing elit sed do. eiusmod tempor ",
-        "Waarom zou je het doen? dolor sit amet, consectetur adipiscing elit.",
-        "Klik op start om te beginnen"
+        'Neem een kijkje mee door de ogen van de toekomstige verzekeringsmaatschappij.',
+        'Deze tool weerspiegelt wat er dagelijks met jouw data op internet gebeurt',
+        'Klik op start om te beginnen'
     ],  
 }
 
