@@ -261,7 +261,3 @@ export const questions = {
         },
     }
 }
-
-
-export const outro = [
-]
