@@ -1,0 +1,105 @@
+@import './variables.scss';
+
+.bg-number {
+    font-size: 60px;
+    line-height: 110%;
+    color: $mainColor;
+}
+
+.carousel {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.md-card {
+    width: 400px;
+    height: 469px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-img {
+    height: 150px;
+    margin: 20px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 28px;
+    color: red;
+}
+
+// Carousel
+// .arrow {
+//     border: solid $mainColor;
+//     border-width: 0 10px 10px 0;
+//     display: inline-block;
+//     padding: 30px;
+//     border-radius: 5px; 
+// }
+
+// .left {
+//     transform: rotate(135deg);
+// }
+
+// .right {
+//     transform: rotate(-45deg);
+// }
+
+.float-right {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}   
+
+small {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+}
+
+.sm-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10%;
+    width: calc(80% -100px);
+    padding: 0 50px;
+}
+
+.header {
+    width: calc(100% - 200px);
+    height: 70px;
+    display: flex;
+    padding: 0 100px;
+    justify-content: space-between;
+
+}
+
+.progressbar, .inner-progressbar {
+    height: 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.progressbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.inner-progressbar {
+    width: 1%;
+    background: $mainColor;
+    z-index: 1;
+}
