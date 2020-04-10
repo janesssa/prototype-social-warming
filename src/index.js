@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './styles/index.scss';
 import './styles/results.scss';
 import  {intro} from "./config";
@@ -10,11 +11,17 @@ import * as serviceWorker from './serviceWorker';
 import Results from './pages/Results';
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <Home content={intro} /> */}
-    <Header />
-    <Results />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route exact path='/'>
+        <Home content={intro} />
+      </Route>
+      <Route path='/results'>
+        <Header />
+        <Results />
+      </Route>
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 
