@@ -23,16 +23,19 @@ const Question = () => {
         return currentQuestion < 10 ? '0' + currentQuestion : currentQuestion
     }
     return (
-        <div className=''>
+        <div className='questions'>
             <Header />
+            <div className="background-number">
+                { questionNumber() }
+            </div>
             <div className="questions-body">
                 <div className="category-name">
                     { categoryObject.title }
                 </div>
-                <div className="question">
+                <div className="title question-title">
                     { questionObject.question}
                 </div>
-                <div className="answers">
+                <div className={`answers ${questionObject.imgAnswers ? 'answers--img' : ''}`}>
                     {questionObject.answers.map((answerObject, index) => {
                         if (questionObject.imgAnswers) {
                             console.log(answerObject)
@@ -41,22 +44,19 @@ const Question = () => {
                             alt={answerObject.img.alt}
                          />
                         } else {
-                            return <div key={index}> {answerObject.answer}</div>
+                            return <div className="answer" key={index}> {answerObject.answer}</div>
                         }
                     })}
                 </div>
                 <div className="next">
-                    <span>Één antwoord mogelijk</span>
-                    <div className="button button--red"
+                    <span className="small-text">Één antwoord mogelijk</span>
+                    <div className="button button--small button--red"
                         onClick={() => nextQuestion()} >
                         volgende
                     </div>
                 </div>
             </div>
             <Logo />
-            <div className="background-number">
-                { questionNumber() }
-            </div>
         </div>
     )
 }

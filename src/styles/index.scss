@@ -30,6 +30,10 @@ body, html, .lg-container {
   }
 }
 
+.small-text {
+  opacity: 0.3;
+}
+
 .home {
   // width: 100%;
   height: calc(100vh - 60px);
@@ -56,6 +60,17 @@ body, html, .lg-container {
   padding: 10px;
   box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.50);
   border-radius: 8px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  width: fit-content;
+
+  &--small {
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 4px;
+  }
+
   a {
     font-weight: 800;
     font-size: 24px;
@@ -64,6 +79,7 @@ body, html, .lg-container {
   }
   &--red {
     background-color: $mainColor;
+    color: $white;
     a {
       color: $white;
     }
