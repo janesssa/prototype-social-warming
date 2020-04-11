@@ -8,11 +8,13 @@ const InsightCard = ({ content }) => {
     const [activeTab, setActiveTab] = useState();
     const isActive = activeTab === content.id;
 
+    const [bind, {height}] = useMeasure()
+
     const arrowProps = useSpring({transform: isActive ? "rotate(-135deg)" : "rotate(135deg)"});
     const mdCardProps = useSpring({ height: isActive ? "200px" : "50px" });
-    const imageProps = useSpring({ height: isActive ? "200px" : "0", width: isActive ? "200px" : "0"});
+    const imageProps = useSpring({ height: isActive ? "200px" : "1px"});
     const contentProps = useSpring({ width: isActive ? "760px" : "960px" });
-    const parProps = useSpring({ opacity: isActive ? "1" : "0", height: isActive ? "200px" : "0" });
+    const parProps = useSpring({ opacity: isActive ? "1" : "0", height: isActive ? "200px" : "1px" });
 
     const toggleAccordion = () => {
         if (isActive) {
@@ -24,9 +26,10 @@ const InsightCard = ({ content }) => {
 
     return (
         <div className="md-card">
-            <animated.span className='card-img' style={imageProps}>
-                <CulteryIcon />
-            </animated.span>
+            <animated.div className="center-icon" style={imageProps} ref={bind}>
+                {/* Todo: Switch voor verschillende Icons */}
+                <CulteryIcon w={height/2} h={height/2} />
+            </animated.div>
             <animated.div className="card-content" style={contentProps}>
                 <animated.small>Categorie</animated.small>
                 <animated.h6 className="card-title">{content.title}</animated.h6>
