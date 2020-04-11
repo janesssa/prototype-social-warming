@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import useMeasure from "react-use-measure";
-import { FaBrain } from "react-icons/fa";
+import CulteryIcon from "../assets/CulteryIcon"
 import "../styles/results.scss";
 
 const InsightCard = ({ content }) => {
@@ -24,7 +24,9 @@ const InsightCard = ({ content }) => {
 
     return (
         <div className="md-card">
-            <animated.span className='card-img' style={imageProps}></animated.span>
+            <animated.span className='card-img' style={imageProps}>
+                <CulteryIcon />
+            </animated.span>
             <animated.div className="card-content" style={contentProps}>
                 <animated.small>Categorie</animated.small>
                 <animated.h6 className="card-title">{content.title}</animated.h6>
