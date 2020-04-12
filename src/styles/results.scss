@@ -7,7 +7,7 @@
 }
 
 .carousel {
-    width: 80%;
+    width: 1200px;
     margin: 0 10%;
     display: flex;
     flex-wrap: wrap;
@@ -16,43 +16,34 @@
 }
 
 .md-card {
-    width: 400px;
-    height: 469px;
+    position: relative;
+    width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
     border-radius: 9px;
     margin: 20px;
-    padding: 20px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .card-img {
-    height: 150px;
-    margin: 20px;
+    // width: 200px;
+    // height: 200px;
+    background: $mainColor;
+}
+
+.card-content {
+    width: 80%;
+    padding: 0 50px;
 }
 
 .card-title {
-    font-weight: 600;
-    font-size: 28px;
-    color: red;
+    font-family: Poppins;
+    font-size: 18px;
+    margin: 12px 0;
 }
-
-// Carousel
-// .arrow {
-//     border: solid $mainColor;
-//     border-width: 0 10px 10px 0;
-//     display: inline-block;
-//     padding: 30px;
-//     border-radius: 5px; 
-// }
-
-// .left {
-//     transform: rotate(135deg);
-// }
-
-// .right {
-//     transform: rotate(-45deg);
-// }
 
 .float-right {
     position: relative;
@@ -102,4 +93,37 @@ small {
     width: 1%;
     background: $mainColor;
     z-index: 1;
+}
+
+.arrow-container {
+    width: 30px;
+    height: 30px;
+}
+
+.arrow {
+    position: absolute;
+    left: 1050px;
+    border: solid $mainColor;
+    border-width: 4px 4px 0 0;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 2px; 
+    margin: 25px 0;
+}
+
+.up {
+    transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+}
+
+p {
+    margin: 0;
+}
+
+.center-icon {
+    display: flex;
+    align-items: center;
 }
