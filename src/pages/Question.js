@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Logo from '../components/Logo.js'
 import Header from '../components/Header.js'
 import  {questions} from '../config';
+import Answer from '../components/Answer.js'
 import '../styles/questions.scss';
 
 const Question = () => {
@@ -46,7 +47,7 @@ const Question = () => {
     return (
         <div className='questions'>
             <Header />
-            <div className="background-number">
+            <div className="bg-number">
                 { questionNumber() }
             </div>
                 {previousButton}
@@ -58,17 +59,9 @@ const Question = () => {
                     { questionObject.question}
                 </div>
                 <div className={`answers ${questionObject.imgAnswers ? 'answers--img' : ''}`}>
-                    {questionObject.answers.map((answerObject, index) => {
-                        if (questionObject.imgAnswers) {
-                            console.log(answerObject)
-                        return <img key={index}
-                            src={process.env.PUBLIC_URL + answerObject.img.src}
-                            alt={answerObject.img.alt}
-                         />
-                        } else {
-                            return <div className="answer" key={index}> {answerObject.answer}</div>
-                        }
-                    })}
+                    {questionObject.answers.map((answerObject, index) => (
+                        <Answer content={answerObject} key={index} />
+                    ))}
                 </div>
                 <div className="next">
                     <span className="small-text">Één antwoord mogelijk</span>
