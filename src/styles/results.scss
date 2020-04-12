@@ -103,3 +103,13 @@ small {
     background: $mainColor;
     z-index: 1;
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+.sm-container {
+    max-width: 400px;
+}
