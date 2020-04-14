@@ -22,6 +22,7 @@ ReactDOM.render(
         <Results />
       </Route>
       <Route path='/question'>
+        <Header />
         <Question content={questions[0]}/>
       </Route>
     </Switch>

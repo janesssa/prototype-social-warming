@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
 import Logo from '../components/Logo.js'
-import Header from '../components/Header.js'
-import  {questions} from '../config';
 import Answer from '../components/Answer.js'
 import '../styles/questions.scss';
 import PreviousButton from '../components/PreviousButton.js';
@@ -34,7 +32,6 @@ const Question = (question) => {
 
     return (
         <div className='questions'>
-            <Header />
             <div className="bg-number">
                 { questionNumber() }
             </div>
