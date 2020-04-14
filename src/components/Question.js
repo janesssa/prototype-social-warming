@@ -3,16 +3,17 @@ import Logo from './Logo.js'
 import Answer from './Answer.js'
 import '../styles/questions.scss';
 import PreviousButton from '../assets/PreviousButton.js';
-import {ValueContext } from '../context/ValueContext'
+import { PreValueContext, ValueContext } from '../context/ValueContext'
 
 const Question = ({content, index, handleNext}) => {
     const question = content
     const questionIndex = index + 1
 
     const {value, setValue} = useContext(ValueContext)
+    const {preValue, setPreValue} = useContext(PreValueContext)
     
-    const handleSubmit = ({value}) => {
-        setValue((v) => v + value)
+    const handleSubmit = () => {
+        setValue((v) => v + preValue)
         handleNext()
     }
 
@@ -51,7 +52,7 @@ const Question = ({content, index, handleNext}) => {
                 <div className="next">
                     <small>Één antwoord mogelijk</small>
                     <div className="button button--small button--red"
-                        onClick={() => handleSubmit(1)}
+                        onClick={() => handleSubmit()}
                          >
                         Volgende
                     </div>
