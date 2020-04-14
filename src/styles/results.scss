@@ -95,6 +95,15 @@ small {
     z-index: 1;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+.sm-container {
+    max-width: 400px;
+
 .arrow-container {
     width: 30px;
     height: 30px;
@@ -126,4 +135,5 @@ p {
 .center-icon {
     display: flex;
     align-items: center;
+
 }
