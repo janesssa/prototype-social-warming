@@ -6,37 +6,37 @@ import Answer from '../components/Answer.js'
 import '../styles/questions.scss';
 import PreviousButton from '../components/PreviousButton.js';
 
-const Question = () => {
-    const categories = ['food', 'sleep', 'sport', 'misc'];
-    const [currentCategory, setCurrentCategory] = useState(0)
-    const [currentQuestion, setCurrentQuestion] = useState(1)
+const Question = (question) => {
+    // const categories = ['food', 'sleep', 'sport', 'misc'];
+    // const [currentCategory, setCurrentCategory] = useState(0)
+    // const [currentQuestion, setCurrentQuestion] = useState(1)
 
-    let categoryObject = questions[categories[currentCategory]]
-    let questionObject = categoryObject.questions[currentQuestion]
+    // let categoryObject = questions[categories[currentCategory]]
+    // let questionObject = categoryObject.questions[currentQuestion]
 
     const nextQuestion = () => {
 
-        setCurrentQuestion(currentQuestion + 1)
-        if (!((currentQuestion+1) in categoryObject.questions)) {
-            if (currentQuestion === 10) {
-                window.location.href = "/results";
-            } else {
-                setCurrentCategory(currentCategory + 1)
-            }
-        }
+        // setCurrentQuestion(currentQuestion + 1)
+        // if (!((currentQuestion+1) in categoryObject.questions)) {
+        //     if (currentQuestion === 10) {
+        //         window.location.href = "/results";
+        //     } else {
+        //         setCurrentCategory(currentCategory + 1)
+        //     }
+        // }
     }
     const previousQuestion = () => {
-        setCurrentQuestion(currentQuestion - 1)
-        if (currentQuestion === 1) {
-            window.location.href = "/";
-        }
-        else if (!((currentQuestion-1) in categoryObject.questions)) {
-            setCurrentCategory(currentCategory - 1)
-        }
+        // setCurrentQuestion(currentQuestion - 1)
+        // if (currentQuestion === 1) {
+        //     window.location.href = "/";
+        // }
+        // else if (!((currentQuestion-1) in categoryObject.questions)) {
+        //     setCurrentCategory(currentCategory - 1)
+        // }
     }
 
     const questionNumber = () => {
-        return currentQuestion < 10 ? '0' + currentQuestion : currentQuestion
+        return question.content.number < 10 ? '0' + question.content.number : question.content.number
     }
 
     return (
@@ -48,14 +48,14 @@ const Question = () => {
             <PreviousButton previousQuestion={previousQuestion}/>
             <div className="questions-body">
                 <div className="category-name">
-                    { categoryObject.title }
+                    { question.content.category }
                 </div>
                 <div className="title question-title">
-                    { questionObject.question}
+                    { question.content.question}
                 </div>
-                <div className={`answers ${questionObject.imgAnswers ? 'answers--img' : ''}`}>
-                    {questionObject.answers.map((answerObject, index) => (
-                        <Answer content={answerObject} key={index} />
+                <div className={`answers ${question.content.imgAnswers ? 'answers--img' : ''}`}>
+                    {question.content.answers.map((answer, index) => (
+                        <Answer content={answer} key={index} />
                     ))}
                 </div>
                 <div className="next">
