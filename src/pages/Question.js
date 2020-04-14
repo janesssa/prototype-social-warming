@@ -4,9 +4,10 @@ import Answer from '../components/Answer.js'
 import '../styles/questions.scss';
 import PreviousButton from '../assets/PreviousButton.js';
 
-const Question = (content) => {
-    const question = content.content
-
+const Question = ({content, index}) => {
+    const question = content
+    const questionIndex = index + 1
+    
     const nextQuestion = () => {
         // setCurrentQuestion(currentQuestion + 1)
         // if (!((currentQuestion+1) in categoryObject.questions)) {
@@ -28,7 +29,7 @@ const Question = (content) => {
     }
 
     const questionNumber = () => {
-        return question.number < 10 ? '0' + question.number : question.number
+        return questionIndex < 10 ? '0' + questionIndex : questionIndex
     }
 
     return (

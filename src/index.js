@@ -30,7 +30,7 @@ ReactDOM.render(
       </Route>
       <Route path='/question'>
         <Header />
-        <Question content={questions[0]}/>
+        <Question content={questions[0]} index={0}/>
       </Route>
     </Switch>
   </Router>,
