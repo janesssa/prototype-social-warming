@@ -16,8 +16,8 @@ const App = () => {
   const [isQuestion, toggleIsQuestion] = useState(false);
   const [isResults, toggleIsResults] = useState(false);
   const [isDashboard, toggleIsDashboard] = useState(false);
-  const [value, setValue] = useState(0);
-  const [preValue, setPreValue] = useState(0);
+  const [value, setValue] = useState({ value: 0, categories: {}});
+  const [preValue, setPreValue] = useState({value: 0, cartegory: ''});
 
   const providerValue = useMemo(() => ({value, setValue}), [value, setValue])
   const providerPreValue = useMemo(() => ({preValue, setPreValue}), [preValue, setPreValue])

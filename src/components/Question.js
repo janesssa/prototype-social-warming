@@ -10,29 +10,45 @@ const Question = ({content, index, handleNext}) => {
     const questionIndex = index + 1
 
     const [selected, setSelected] = useState(false)
-
+    
     const {value, setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
 
     const refs = useRef(question.answers.map(() => createRef()))
 
-    const toggleSelected = (i, v, c) => {
-        const activeRef = refs.current[i].current;
-        if(activeRef !== null) {
-            activeRef.classList.add(c)
-            refs.current.map(ref => {
-                console.log(ref)
-                if(ref.current !== activeRef){
-                    ref.current.classList.remove(c)
-                }
-            })
-            setSelected(true)
-            setPreValue(v)
+    const toggleSelected = (i, v, c, cn) => {
+        if(refs.current[i]){
+            const activeRef = refs.current[i].current;
+            console.log(activeRef)
+            if(activeRef !== null) {
+                activeRef.classList.add(cn)
+                refs.current.map(ref => {
+                    console.log(ref)
+                    if(ref.current !== activeRef){
+                        ref.current.classList.remove(cn)
+                    }
+                })
+                setSelected(true)
+                setPreValue({ value: v, category: c})
+            } 
         }
     }
     
     const handleSubmit = () => {
-        setValue((v) => v + preValue)
+        let pa = preValue.value
+        let category = preValue.category
+        setValue((v) => {
+            // The value of the answer will get added to the category times 3
+            let categoryValue = v.categories[category] ? v.categories[category] + (pa*3) : pa*3
+            return {
+                ...v,
+                value: v.value + pa,
+                categories: {
+                    ...v.categories,
+                    [category]: categoryValue
+                }
+            }
+        })
         refs.current.map(ref => {
             const classList = ref.current.classList
             if(classList.contains('answer-img')) {
@@ -78,7 +94,7 @@ const Question = ({content, index, handleNext}) => {
                             <Image
                                 ref={refs.current[index]}
                                 key={index}
-                                handleClick={() => toggleSelected(index, answer.value, "answer-img--active")}
+                                handleClick={() => toggleSelected(index, answer.value, question.category, "answer-img--active")}
                                 className='answer-img'
                                 src={process.env.PUBLIC_URL + answer.img.src}
                                 alt={answer.img.alt}
@@ -86,7 +102,7 @@ const Question = ({content, index, handleNext}) => {
                         ) : (
                             <div
                                 ref={refs.current[index]}
-                                onClick={() => toggleSelected(index, answer.value, "answer--active")}
+                                onClick={() => toggleSelected(index, answer.value, question.category, "answer--active")}
                                 className='answer'
                             >
                               {answer.answer}
