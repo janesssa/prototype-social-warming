@@ -63,7 +63,7 @@ const Question = () => {
                     <div className="button button--small button--red"
                         onClick={() => nextQuestion()}
                          >
-                        volgende
+                        Volgende
                     </div>
                 </div>
             </div>
