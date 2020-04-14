@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './styles/index.scss';
 import './styles/results.scss';
-import  {intro} from "./config";
+import  {intro, questions} from "./config";
 import Home from './pages/Home';
 import Header from './components/Header'
 
@@ -22,7 +22,7 @@ ReactDOM.render(
         <Results />
       </Route>
       <Route path='/question'>
-        <Question />
+        <Question content={questions[0]}/>
       </Route>
     </Switch>
   </Router>,
