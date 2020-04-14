@@ -4,7 +4,8 @@ import Answer from '../components/Answer.js'
 import '../styles/questions.scss';
 import PreviousButton from '../assets/PreviousButton.js';
 
-const Question = (question) => {
+const Question = (content) => {
+    const question = content.content
 
     const nextQuestion = () => {
         // setCurrentQuestion(currentQuestion + 1)
@@ -27,7 +28,7 @@ const Question = (question) => {
     }
 
     const questionNumber = () => {
-        return question.content.number < 10 ? '0' + question.content.number : question.content.number
+        return question.number < 10 ? '0' + question.number : question.number
     }
 
     return (
@@ -38,13 +39,13 @@ const Question = (question) => {
             <PreviousButton previousQuestion={previousQuestion}/>
             <div className="questions-body">
                 <div className="category-name">
-                    { question.content.category }
+                    { question.category }
                 </div>
                 <div className="title question-title">
-                    { question.content.question}
+                    { question.question}
                 </div>
-                <div className={`answers ${question.content.imgAnswers ? 'answers--img' : ''}`}>
-                    {question.content.answers.map((answer, index) => (
+                <div className={`answers ${question.imgAnswers ? 'answers--img' : ''}`}>
+                    {question.answers.map((answer, index) => (
                         <Answer content={answer} key={index} />
                     ))}
                 </div>
