@@ -19,11 +19,11 @@ export const questions = [
             },
             {
                 answer: 'Ja, maar dan alleen een gezonde poké bowl of salade.',
-                value: 0
+                value: 5
             },
             {
                 answer: 'Nee, eigenlijk niet.',
-                value: 0
+                value: 10
             },
         ],                    
     },
@@ -33,7 +33,7 @@ export const questions = [
         imgAnswers: true,
         answers: [
             {
-                value: 0,
+                value: 5,
                 img: {
                     src: '/assets/img/questions/Q2A1.png',
                     alt: 'Een plank met kaas, brood en druiven',
@@ -47,7 +47,7 @@ export const questions = [
                     }
             },
             {
-                value: 0,
+                value: 10,
                 img: {
                     src: '/assets/img/questions/Q2A3.png',
                     alt: 'Pizza',
@@ -61,14 +61,14 @@ export const questions = [
         imgAnswers: true,
         answers: [
             {
-                value: 0,
+                value: 10,
                 img: {
                     src: '/assets/img/questions/Q3A1.png',
                     alt: 'Bruinbrood',
                     }
             },
             {
-                value: 0,
+                value: 5 ,
                 img: {
                     src: '/assets/img/questions/Q3A2.png',
                     alt: 'Stokbrood',
@@ -90,7 +90,7 @@ export const questions = [
         answers: [
             {
                 answer: 'Ja, eigenlijk wel lekker.',
-                value: 0
+                value: 10
             },
             {
                 answer: 'Nee, was niet mijn beste nacht.',
@@ -98,7 +98,7 @@ export const questions = [
             },
             {
                 answer: 'Niet anders dan anders.',
-                value: 0
+                value: 5  
             },
         ],                    
     },
@@ -115,14 +115,14 @@ export const questions = [
                     }
             },
             {
-                value: 0,
+                value: 5 ,
                 img: {
                     src: '/assets/img/questions/Q5A2.png',
                     alt: 'Zij',
                     }
             },
             {
-                value: 0,
+                value: 10,
                 img: {
                     src: '/assets/img/questions/Q5A1.png',
                     alt: 'Rug',
@@ -141,11 +141,11 @@ export const questions = [
             },
             {
                 answer: 'Ik ga weleens naar de fysio',
-                value: 0
+                value: 5
             },
             {
                 answer: 'Ik heb nooit blessures (gehad). ',
-                value: 0
+                value: 10
             },
         ],                    
     },
@@ -155,14 +155,14 @@ export const questions = [
         imgAnswers: true,
         answers: [
             {
-                value: 0,
+                value: 10,
                 img: {
                     src: '/assets/img/questions/Q7A1.png',
                     alt: 'Buiten joggen',
                     }
             },
             {
-                value: 0,
+                value: 5,
                 img: {
                     src: '/assets/img/questions/Q7A2.png',
                     alt: 'sportschool',
@@ -171,7 +171,7 @@ export const questions = [
             {
                 value: 0,
                 img: {
-                    src: '/assets/img/questions/Q7A3.png',
+                    src:  '/assets/img/questions/Q7A3.png',
                     alt: 'Op de bank gamen',
                     }
             },
@@ -188,15 +188,15 @@ export const questions = [
             },
             {
                 answer: 'Ik rook af en toe een sigaretje.',
-                value: 0
+                value: 3.3
             },
             {
                 answer: 'Ik heb ooit een sigaretje gerookt.',
-                value: 0
+                value: 6.6
             },
-            {
+            {  
                 answer: 'Ik rook niet.',
-                value: 0
+                value: 10
             },
         ],                    
     },
@@ -211,15 +211,15 @@ export const questions = [
             },
             {
                 answer: 'Op z’n tijd. Als we allemaal vrij hebben.',
-                value: 0
+                value: 3.3
             },
             {
                 answer: 'Echt heel sporadisch..',
-                value: 0
+                value: 6.6
             },
             {
                 answer: 'k drink geen alcohol, doe maar ice tea.',
-                value: 0
+                value: 10
             },
         ],                    
     },
@@ -234,19 +234,19 @@ export const questions = [
             },
             {
                 answer: 'Eens in de maand gaan we er op uit.',
-                value: 0
+                value: 2.5
             },
             {
                 answer: 'Bijna elke week staat er wel iets op de planning.',
-                value: 0
+                value: 5
             },
             {
                 answer: 'We zien elkaar meerdere keren per week.',
-                value: 0
+                value: 7.5
             },
             {
                 answer: 'We zien elkaar (semi-)dagelijks.',
-                value: 0
+                value: 10
             },
         ],                    
     },
