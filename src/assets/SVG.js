@@ -7,7 +7,8 @@ const SVG = ({
         fs = "none", 
         xmlns = "http://www.w3.org/2000/svg",
         d,
-        fp = "#000"
+        fp = "#000",
+        fo="1"
 }) => {
     return (
     <svg 
@@ -20,6 +21,7 @@ const SVG = ({
         <path 
             d={d}
             fill={fp}
+            fill-opacity={fo}
         />
     </svg>
     )

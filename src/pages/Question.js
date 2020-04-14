@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Logo from '../components/Logo.js'
 import Answer from '../components/Answer.js'
 import '../styles/questions.scss';
-import PreviousButton from '../components/PreviousButton.js';
+import PreviousButton from '../assets/PreviousButton.js';
 
 const Question = (question) => {
 
