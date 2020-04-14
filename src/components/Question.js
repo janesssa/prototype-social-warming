@@ -1,6 +1,6 @@
-import React, { useState, useContext} from 'react'
+import React, { useState, useContext, useRef, createRef} from 'react'
 import Logo from './Logo.js'
-import Answer from './Answer.js'
+import Image from "../assets/Image"
 import '../styles/questions.scss';
 import PreviousButton from '../assets/PreviousButton.js';
 import { PreValueContext, ValueContext } from '../context/ValueContext'
@@ -13,9 +13,35 @@ const Question = ({content, index, handleNext}) => {
 
     const {value, setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
+
+    const refs = useRef(question.answers.map(() => createRef()))
+
+    const toggleSelected = (i, v, c) => {
+        const activeRef = refs.current[i].current;
+        if(activeRef !== null) {
+            activeRef.classList.add(c)
+            refs.current.map(ref => {
+                console.log(ref)
+                if(ref.current !== activeRef){
+                    ref.current.classList.remove(c)
+                }
+            })
+            setSelected(true)
+            setPreValue(v)
+        }
+    }
     
     const handleSubmit = () => {
         setValue((v) => v + preValue)
+        refs.current.map(ref => {
+            const classList = ref.current.classList
+            if(classList.contains('answer-img')) {
+                console.log('remove img clas')
+                classList.remove("answer-img--active")
+            } else {
+                classList.remove("answer--active")
+            }
+        })
         handleNext()
     }
 
@@ -47,9 +73,26 @@ const Question = ({content, index, handleNext}) => {
                     { question.question}
                 </div>
                 <div className={`answers ${question.imgAnswers ? 'answers--img' : ''}`}>
-                    {question.answers.map((answer, index) => (
-                        <Answer content={answer} key={index} img={question.imgAnswers} onSelected={(s) => setSelected(s)} />
-                    ))}
+                    {question.answers.map((answer, index) => {
+                        return question.imgAnswers ? (
+                            <Image
+                                ref={refs.current[index]}
+                                key={index}
+                                handleClick={() => toggleSelected(index, answer.value, "answer-img--active")}
+                                className='answer-img'
+                                src={process.env.PUBLIC_URL + answer.img.src}
+                                alt={answer.img.alt}
+                            />
+                        ) : (
+                            <div
+                                ref={refs.current[index]}
+                                onClick={() => toggleSelected(index, answer.value, "answer--active")}
+                                className='answer'
+                            >
+                              {answer.answer}
+                            </div>
+                        );
+                    })}
                 </div>
                 <div className="next">
                     <small>Één antwoord mogelijk</small>
