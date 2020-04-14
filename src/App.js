@@ -8,15 +8,21 @@ import Dashboard from "./components/Dashboard";
 import Results from "./pages/Results";
 
 const App = () => {
-  const [index, setIndex] = useState(0);
-  const [text, setText] = useState("");
-  const [style, setStyle] = useState({});
-  const [isHome, toggleIsHome] = useState(true);
-  const [isQuestion, toggleIsQuestion] = useState(false);
-  const [isResults, toggleIsResults] = useState(false);
-  const [isDashboard, toggleIsDashboard] = useState(false);
+    const [index, setIndex] = useState(0);
+    const [text, setText] = useState("");
+    const [style, setStyle] = useState({});
+    const [isHome, toggleIsHome] = useState(true);
+    const [isQuestion, toggleIsQuestion] = useState(false);
+    const [isResults, toggleIsResults] = useState(false);
+    const [isDashboard, toggleIsDashboard] = useState(false);
 
-  const length = questions.length;
+    const length = questions.length;
+
+    const handleStyle = () => {
+        const width = (( 100 / (length + 1) ) * (index+1) ) 
+        // Not sure if the if statement in line 25 works 
+        setStyle({ width: width <= 100 ? width : 100 + "%" })
+    }
 
     const handleNext = async () => {
         setIndex((i) => i + 1);
@@ -30,21 +36,26 @@ const App = () => {
         } else if (index === 0 && isQuestion) {
             // Move from 1st question to 2nd
             setText(`Vraag ${index + 2} van de ${length}`);
+            handleStyle()
         } else if (index < length - 1) {
             // Update index untill end of questions
             setText(`Vraag ${index + 2} van de ${length}`);
+            handleStyle()
         } else if (index === length -1){
             // Move from last question to dashboard
             toggleIsDashboard(true);
             toggleIsQuestion(false);
             toggleIsResults(false);
             setText('Resultaten')
+            handleStyle()
         } else if (index === length){
             // Move from dashboard to results
             toggleIsResults(true);
             toggleIsDashboard(false);
             toggleIsQuestion(false);
             setText('Wat betekent dit voor jou?')
+            handleStyle()
+            
         }
     }
 
