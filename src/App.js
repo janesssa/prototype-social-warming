@@ -21,7 +21,7 @@ const App = () => {
     const handleStyle = () => {
         const width = (( 100 / (length + 1) ) * (index+1) ) 
         // Not sure if the if statement in line 25 works 
-        setStyle({ width: width <= 100 ? width : 100 + "%" })
+        setStyle({ width: (width <= 100 ? width : 100) + "%" })
     }
 
     const handleNext = async () => {
