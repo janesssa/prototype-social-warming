@@ -7,15 +7,8 @@ import '../styles/questions.scss';
 import PreviousButton from '../components/PreviousButton.js';
 
 const Question = (question) => {
-    // const categories = ['food', 'sleep', 'sport', 'misc'];
-    // const [currentCategory, setCurrentCategory] = useState(0)
-    // const [currentQuestion, setCurrentQuestion] = useState(1)
-
-    // let categoryObject = questions[categories[currentCategory]]
-    // let questionObject = categoryObject.questions[currentQuestion]
 
     const nextQuestion = () => {
-
         // setCurrentQuestion(currentQuestion + 1)
         // if (!((currentQuestion+1) in categoryObject.questions)) {
         //     if (currentQuestion === 10) {
