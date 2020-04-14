@@ -2,14 +2,17 @@ import React, { useState, useContext } from "react";
 import Image from "../assets/Image";
 import { PreValueContext } from "../context/ValueContext";
 
-const Answer = ({ content, img }) => {
+const Answer = ({ content, img, onSelected }) => {
   const [selected, setSelected] = useState(false);
   const {preValue, setPreValue} = useContext(PreValueContext)
 
   const handleClick = (value) => {
     setPreValue(value)
     setSelected(!selected);
+    // Passing the selected state back to the parent
+    onSelected(selected)
   };
+
 
   if (img) {
     return (

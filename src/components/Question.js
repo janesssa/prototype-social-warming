@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useState, useContext} from 'react'
 import Logo from './Logo.js'
 import Answer from './Answer.js'
 import '../styles/questions.scss';
@@ -8,6 +8,8 @@ import { PreValueContext, ValueContext } from '../context/ValueContext'
 const Question = ({content, index, handleNext}) => {
     const question = content
     const questionIndex = index + 1
+
+    const [selected, setSelected] = useState(false)
 
     const {value, setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
@@ -46,16 +48,15 @@ const Question = ({content, index, handleNext}) => {
                 </div>
                 <div className={`answers ${question.imgAnswers ? 'answers--img' : ''}`}>
                     {question.answers.map((answer, index) => (
-                        <Answer content={answer} key={index} img={question.imgAnswers} />
+                        <Answer content={answer} key={index} img={question.imgAnswers} onSelected={(s) => setSelected(s)} />
                     ))}
                 </div>
                 <div className="next">
                     <small>Één antwoord mogelijk</small>
-                    <div className="button button--small button--red"
-                        onClick={() => handleSubmit()}
-                         >
+                    {/* Todo: Style button when disabled */}
+                    <button className="button button--small button--red" onClick={() => handleSubmit()} disabled={!selected}>
                         Volgende
-                    </div>
+                    </button>
                 </div>
             </div>
             <Logo />
