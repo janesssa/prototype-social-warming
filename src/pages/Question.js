@@ -49,7 +49,7 @@ const Question = (question) => {
                     ))}
                 </div>
                 <div className="next">
-                    <span className="small-text">Één antwoord mogelijk</span>
+                    <small>Één antwoord mogelijk</small>
                     <div className="button button--small button--red"
                         onClick={() => nextQuestion()}
                          >
