@@ -19,13 +19,13 @@ const Header = () => {
     
     return (
         <>
-        <div className="header">
-            <h3>product naam</h3>
-            <small onClick={() => handleNext()}>{text}</small>
-        </div>
-        <div className="progressbar">
-            <div className="inner-progressbar" style={style}></div>
-        </div>
+            <div className="header">
+                <h3>product naam</h3>
+                <small onClick={() => handleNext()}>{text}</small>
+            </div>
+            <div className="progressbar">
+                <div className="inner-progressbar" style={style}></div>
+            </div>
         </>
     );
 };
