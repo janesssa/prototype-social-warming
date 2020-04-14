@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 
 
-const Answer = (answerObject) => {
+const Answer = (data) => {
     const [selected, setSelected] = useState(false)
     if (answerObject.content.img) {
         return (
