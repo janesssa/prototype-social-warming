@@ -10,7 +10,6 @@ export const intro = {
 export const questions = [
     {
         question: 'Laat je graag eten thuis bezorgen?',
-        number: 1,
         category: 'Eten',
         imgAnswers: false,
         answers: [
@@ -31,7 +30,6 @@ export const questions = [
     {
         question: 'Wat zie je tijdens een feestje het liefst op tafel staan?',
         category: 'Eten',
-        number: 2,
         imgAnswers: true,
         answers: [
             {
@@ -60,7 +58,6 @@ export const questions = [
     {
         question: 'Welke beleg jij het liefst?',
         category: 'Eten',
-        number: 3,
         imgAnswers: true,
         answers: [
             {
@@ -89,7 +86,6 @@ export const questions = [
     {
         question: 'Heb je afgelopen nacht lekker geslapen? ',
         category: 'Slaap',
-        number: 4,
         imgAnswers: false,
         answers: [
             {
@@ -109,7 +105,6 @@ export const questions = [
     {
         question: 'Wat is je favorite slaaphouding',
         category: 'Slaap',
-        number: 5,
         imgAnswers: true,
         answers: [
             {
@@ -139,7 +134,6 @@ export const questions = [
         question: 'Beschouw je jezelf als blessure gevoelig?',
         imgAnswers: false,
         category: 'Sport',
-        number: 6,
         answers: [
             {
                 answer: 'Ik heb een (zware) blessure (gehad).',
@@ -159,7 +153,6 @@ export const questions = [
         question: 'Hoe sport jij het liefst',
         category: 'Sport',
         imgAnswers: true,
-        number: 7,
         answers: [
             {
                 value: 0,
@@ -188,7 +181,6 @@ export const questions = [
         question: 'Rook je wel eens?',
         category: 'Overige',
         imgAnswers: false,
-        number: 8,
         answers: [
             {
                 answer: 'Ja ik ben een frequente roker.',
@@ -212,7 +204,6 @@ export const questions = [
         question: 'Doe je weleens een drankje?',
         category: 'Overige',
         imgAnswers: false,
-        number: 9,
         answers: [
             {
                 answer: 'Ik ga regelmatig drinken met de maten.',
@@ -236,7 +227,6 @@ export const questions = [
         question: 'Ga jij regelmatig met vrienden of kennissen iets leuks doen?',
         category: 'Overige',
         imgAnswers: false,
-        number: 10,
         answers: [
             {
                 answer: 'Eigenlijk doe ik liever in m’n eentje dingen.',
