@@ -30,6 +30,10 @@ body, html, .lg-container {
   }
 }
 
+.small-text {
+  opacity: 0.3;
+}
+
 .home {
   // width: 100%;
   height: calc(100vh - 60px);
@@ -59,10 +63,27 @@ body, html, .lg-container {
   font-weight: 800;
   font-size: 24px;
   line-height: 36px;
-  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+
+  &--small {
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 4px;
+  }
+
+  a {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+  }
   &--red {
     background-color: $mainColor;
     color: $white;
+    a {
+      color: $white;
+    }
   }
 }
 
@@ -97,4 +118,9 @@ body, html, .lg-container {
   }
 }
 
-
+small {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 20px 0;
+}
