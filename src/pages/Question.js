@@ -32,7 +32,7 @@ const Question = (question) => {
 
     return (
         <div className='questions'>
-            <div className="bg-number">
+            <div className="bg-number--big">
                 { questionNumber() }
             </div>
             <PreviousButton previousQuestion={previousQuestion}/>
