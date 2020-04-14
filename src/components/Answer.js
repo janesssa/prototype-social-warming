@@ -1,32 +1,35 @@
-import React, {useState}from "react";
-import Image from "../assets/Image"
+import React, { useState, useContext } from "react";
+import Image from "../assets/Image";
+import { PreValueContext } from "../context/ValueContext";
 
+const Answer = ({ content, img }) => {
+  const [selected, setSelected] = useState(false);
+  const {preValue, setPreValue} = useContext(PreValueContext)
 
-const Answer = (data) => {
-    const [selected, setSelected] = useState(false)
-    const handleClick = () => {
-        setSelected(!selected)
-    }
-    if (data.content.img) {
-        return (
-            <Image
-                handleClick={handleClick}
-                className={`answer-img ${selected ? 'answer-img--active' : ''}`}
-                src={process.env.PUBLIC_URL + data.content.img.src}
-                alt={data.content.img.alt}
-            />
-        )
+  const handleClick = (value) => {
+    setPreValue(value)
+    setSelected(!selected);
+  };
 
-    } else {
-        return (
-            <div 
-                onClick={() => setSelected(!selected)}
-                className={`answer ${selected ? 'answer--active' : ''}`}> 
-                {data.content.answer}
-            </div>
-        )
-    }
-
-}
+  if (img) {
+    return (
+      <Image
+        handleClick={() => handleClick(content.value)}
+        className={`answer-img ${selected ? "answer-img--active" : ""}`}
+        src={process.env.PUBLIC_URL + content.img.src}
+        alt={content.img.alt}
+      />
+    );
+  } else {
+    return (
+      <div
+        onClick={() => handleClick(content.value)}
+        className={`answer ${selected ? "answer--active" : ""}`}
+      >
+        {content.answer}
+      </div>
+    );
+  }
+};
 
 export default Answer;

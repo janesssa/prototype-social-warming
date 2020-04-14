@@ -1,23 +1,21 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
 import Logo from './Logo.js'
 import Answer from './Answer.js'
 import '../styles/questions.scss';
 import PreviousButton from '../assets/PreviousButton.js';
+import {ValueContext } from '../context/ValueContext'
 
 const Question = ({content, index, handleNext}) => {
     const question = content
     const questionIndex = index + 1
+
+    const {value, setValue} = useContext(ValueContext)
     
-    const nextQuestion = () => {
-        // setCurrentQuestion(currentQuestion + 1)
-        // if (!((currentQuestion+1) in categoryObject.questions)) {
-        //     if (currentQuestion === 10) {
-        //         window.location.href = "/results";
-        //     } else {
-        //         setCurrentCategory(currentCategory + 1)
-        //     }
-        // }
+    const handleSubmit = ({value}) => {
+        setValue((v) => v + value)
+        handleNext()
     }
+
     const previousQuestion = () => {
         // setCurrentQuestion(currentQuestion - 1)
         // if (currentQuestion === 1) {
@@ -47,13 +45,13 @@ const Question = ({content, index, handleNext}) => {
                 </div>
                 <div className={`answers ${question.imgAnswers ? 'answers--img' : ''}`}>
                     {question.answers.map((answer, index) => (
-                        <Answer content={answer} key={index} />
+                        <Answer content={answer} key={index} img={question.imgAnswers} />
                     ))}
                 </div>
                 <div className="next">
                     <small>Één antwoord mogelijk</small>
                     <div className="button button--small button--red"
-                        onClick={() => handleNext()}
+                        onClick={() => handleSubmit(1)}
                          >
                         Volgende
                     </div>
