@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/index.scss';
 import Logo from '../components/Logo.js'
 
-const Home = ({content}) => {
+const Home = ({content, handleNext}) => {
     return (
         <div className='home'>
             <Logo />
@@ -17,9 +17,9 @@ const Home = ({content}) => {
                         </p>
                     ))}
                 </div>
-                <div className="button button--red" href="/">
-                    <a href="/question">Start </a>
-                </div>
+                <button className="button button--red" onClick={() => handleNext()}>
+                    Start
+                </button>
             </div>
         </div>
     )
