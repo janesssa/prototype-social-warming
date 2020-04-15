@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, createRef} from 'react'
+import React, { useState, useEffect, useContext, useRef, createRef} from 'react'
 import Logo from './Logo.js'
 import Image from "../assets/Image"
 import '../styles/questions.scss';
@@ -10,11 +10,18 @@ const Question = ({content, index, handleNext}) => {
     const questionIndex = index + 1
 
     const [selected, setSelected] = useState(false)
+    const [length, setLength] = useState(0)
     
     const {value, setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
 
+    console.log(question.answers)
     const refs = useRef(question.answers.map(() => createRef()))
+    console.log(refs)
+
+    useEffect(() => {
+        
+    }, [length])
 
     const toggleSelected = (i, v, c, cn) => {
         if(refs.current[i]){
