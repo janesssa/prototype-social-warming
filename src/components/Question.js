@@ -17,7 +17,6 @@ const Question = ({content, index, handleNext}) => {
 
     // console.log(question.answers)
     const refs = useRef(question.answers.map(() => createRef()))
-    // console.log(refs)
 
     useEffect(() => {
         
