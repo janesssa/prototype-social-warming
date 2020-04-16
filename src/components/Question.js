@@ -25,7 +25,6 @@ const Question = ({content, index, handleNext}) => {
     const toggleSelected = (i, v, c, cn) => {
         if(refs.current[i]){
             const activeRef = refs.current[i].current;
-            // console.log(activeRef)
             if(activeRef !== null) {
                 activeRef.classList.add(cn)
                 refs.current.map(ref => {
