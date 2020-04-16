@@ -57,14 +57,16 @@ body, html, .lg-container {
 }
 
 .button {
-  padding: 10px;
-  box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.50);
+  padding:10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.20);
   border-radius: 8px;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 16px;
+  font-weight: bold;
+
   width: fit-content;
   cursor: pointer;
+  background-color: $mainColor;
+  color: $white;
 
   &--small {
     font-size: 18px;
@@ -73,18 +75,13 @@ body, html, .lg-container {
   }
 
   a {
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 36px;
     text-decoration: none;
   }
-  &--red {
-    background-color: $mainColor;
-    color: $white;
-    a {
-      color: $white;
-    }
-  }
+
+}
+
+.button-margin{
+  margin-top: 40px;
 }
 
 .logo {
@@ -123,4 +120,64 @@ small {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.4);
   margin: 20px 0;
+}
+
+.camResults{
+  position: absolute;
+  background-color: $mainColor;
+  color: $white; 
+  height: 28px;
+  padding: 0 10px;
+  margin-top: 50px; 
+  margin-left: -100px;
+}
+
+.line{
+  width: 3px;
+  height: 200px; 
+  margin-left: 160px;
+  margin-top: -50px;
+  background-color: $mainColor;
+  position: absolute;
+  transform: rotate(300deg);
+}
+
+.line::after{
+  position: absolute;
+  background-color: $mainColor;
+  width: 50px;
+  height: 50px; 
+}
+
+.camRes2{
+  margin-top: 400px;
+  
+  .line{
+    transform: rotate(60deg);
+    margin-top: -170px;
+  }
+
+}
+
+.camRes3{
+  margin-top: 400px;
+  margin-left: 550px;
+  
+  .line{
+    transform: rotate(120deg);
+    margin-top: -170px;
+    margin-left: -90px;
+  }
+
+}
+
+.camRes4{
+  margin-left: 550px;
+  
+  .line{
+    transform: rotate(60deg);
+    margin-top: -50px;
+    margin-left: -90px;
+  }
+
 }
