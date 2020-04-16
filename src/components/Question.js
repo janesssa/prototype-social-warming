@@ -23,7 +23,6 @@ const Question = ({content, index, handleNext}) => {
     }, [length])
 
     const toggleSelected = (i, v, c, cn) => {
-        console.log(i)
         if(refs.current[i]){
             const activeRef = refs.current[i].current;
             // console.log(activeRef)
