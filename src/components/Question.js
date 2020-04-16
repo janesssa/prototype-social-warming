@@ -42,7 +42,6 @@ const Question = ({content, index, handleNext}) => {
         let pa = preValue.value
         let category = preValue.category
         setValue((v) => {
-            console.log(v)
             // The value of the answer will get added to the category times 3
             let categoryValue = v.categories[category] ? v.categories[category] + (pa*3) : pa*3
             let answers = v.answers.push(preValue.answer)
