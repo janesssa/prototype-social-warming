@@ -1,7 +1,7 @@
 import React from "react";
 import Webcam from "react-webcam";
 
-const Dashboard = () => {
+const Dashboard = ({handleNext}) => {
     return (
         <div className='flex-container'>
             <div className='sm-container'>
@@ -30,9 +30,6 @@ const Dashboard = () => {
                 <p>Erg Gay</p>
                 <span className="line"> </span>    
             </div> 
-
-
-
             <Webcam />
         </div>
     )
