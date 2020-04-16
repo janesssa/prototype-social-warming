@@ -17,7 +17,7 @@ const Home = ({content}) => {
                         </p>
                     ))}
                 </div>
-                <div className="button button--red" href="/">
+                <div className="button" href="/">
                     <a href="/question">Start </a>
                 </div>
             </div>
