@@ -16,8 +16,8 @@ const App = () => {
   const [isQuestion, toggleIsQuestion] = useState(false);
   const [isResults, toggleIsResults] = useState(false);
   const [isDashboard, toggleIsDashboard] = useState(false);
-  const [value, setValue] = useState({ value: 0, categories: {}});
-  const [preValue, setPreValue] = useState({value: 0, cartegory: ''});
+  const [value, setValue] = useState({ value: 0, categories: {}, answers:[]});
+  const [preValue, setPreValue] = useState({value: 0, cartegory: '', answer: 0});
 
   const providerValue = useMemo(() => ({value, setValue}), [value, setValue])
   const providerPreValue = useMemo(() => ({preValue, setPreValue}), [preValue, setPreValue])
@@ -30,11 +30,11 @@ const App = () => {
       setStyle({ width: (width <= 100 ? width : 100) + "%" })
   }
 
-  const handleStyle = () => {
-    const width = (100 / (length + 1)) * (index + 1);
-    // Not sure if the if statement in line 25 works
-    setStyle({ width: width <= 100 ? width : 100 + "%" });
-  };
+  // const handleStyle = () => {
+  //   const width = (100 / (length + 1)) * (index + 1);
+  //   // Not sure if the if statement in line 25 works
+  //   setStyle({ width: width <= 100 ? width : 100 + "%" });
+  // };
 
   const handleNext = async () => {
     setIndex((i) => i + 1);

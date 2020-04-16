@@ -15,28 +15,29 @@ const Question = ({content, index, handleNext}) => {
     const {value, setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
 
-    console.log(question.answers)
+    // console.log(question.answers)
     const refs = useRef(question.answers.map(() => createRef()))
-    console.log(refs)
+    // console.log(refs)
 
     useEffect(() => {
         
     }, [length])
 
     const toggleSelected = (i, v, c, cn) => {
+        console.log(i)
         if(refs.current[i]){
             const activeRef = refs.current[i].current;
-            console.log(activeRef)
+            // console.log(activeRef)
             if(activeRef !== null) {
                 activeRef.classList.add(cn)
                 refs.current.map(ref => {
-                    console.log(ref)
+                    // console.log(ref)
                     if(ref.current !== activeRef){
                         ref.current.classList.remove(cn)
                     }
                 })
                 setSelected(true)
-                setPreValue({ value: v, category: c})
+                setPreValue({ value: v, category: c, answer: i,})
             } 
         }
     }
@@ -45,21 +46,24 @@ const Question = ({content, index, handleNext}) => {
         let pa = preValue.value
         let category = preValue.category
         setValue((v) => {
+            console.log(v)
             // The value of the answer will get added to the category times 3
             let categoryValue = v.categories[category] ? v.categories[category] + (pa*3) : pa*3
+            let answers = v.answers.push(preValue.answer)
             return {
                 ...v,
                 value: v.value + pa,
                 categories: {
                     ...v.categories,
-                    [category]: categoryValue
+                    [category]: categoryValue,
+                // answers : answers
                 }
             }
         })
         refs.current.map(ref => {
             const classList = ref.current.classList
             if(classList.contains('answer-img')) {
-                console.log('remove img clas')
+                // console.log('remove img clas')
                 classList.remove("answer-img--active")
             } else {
                 classList.remove("answer--active")
