@@ -28,7 +28,6 @@ const Question = ({content, index, handleNext}) => {
             if(activeRef !== null) {
                 activeRef.classList.add(cn)
                 refs.current.map(ref => {
-                    // console.log(ref)
                     if(ref.current !== activeRef){
                         ref.current.classList.remove(cn)
                     }
