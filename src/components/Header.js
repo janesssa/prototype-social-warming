@@ -9,8 +9,6 @@ const Header = ({ text, style, handleNext}) => {
     <>
       <div className="header">
         <h3>product naam</h3>
-        <small>{JSON.stringify(preValue)}</small>
-        <small>{JSON.stringify(value)}</small>
         <small onClick={() => handleNext()}>{text}</small>
       </div>
       <div className="progressbar">

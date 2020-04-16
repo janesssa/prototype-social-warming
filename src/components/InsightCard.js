@@ -4,7 +4,7 @@ import useMeasure from "react-use-measure";
 import CulteryIcon from "../assets/CulteryIcon"
 import "../styles/results.scss";
 
-const InsightCard = ({ content }) => {
+const InsightCard = ({ content, answer }) => {
     const [activeTab, setActiveTab] = useState();
     const isActive = activeTab === content.id;
 
@@ -23,7 +23,6 @@ const InsightCard = ({ content }) => {
             setActiveTab(content.id);
         }
     };
-
     return (
         <div className="md-card">
             <animated.div className="center-icon" style={imageProps} ref={bind}>
@@ -33,7 +32,7 @@ const InsightCard = ({ content }) => {
             <animated.div className="card-content" style={contentProps}>
                 <animated.small>Categorie</animated.small>
                 <animated.h6 className="card-title">{content.title}</animated.h6>
-                <animated.p style={parProps}>{content.content}</animated.p>
+                <animated.p style={parProps}>{content.content[answer]}</animated.p>
             </animated.div>
             <animated.div
                 className="arrow"
