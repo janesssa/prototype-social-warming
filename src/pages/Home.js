@@ -17,11 +17,9 @@ const Home = ({content, handleNext}) => {
                         </p>
                     ))}
                 </div>
-
-                <div className="button" href="/">
-                    <a href="/question">Start </a>
-                </div>
-
+                <button className="button button--red" onClick={() => handleNext()}>
+                    Start
+                </button>
             </div>
         </div>
     )
