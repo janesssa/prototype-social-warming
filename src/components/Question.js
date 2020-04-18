@@ -27,7 +27,7 @@ const Question = ({content, index, handleNext}) => {
                     }
                 })
                 setSelected(true)
-                setPreValue({ value: v, category: c, answer: i,})
+                setPreValue({ value: v*1.7, category: c, answer: i,})
             } 
         }
     }
@@ -45,6 +45,7 @@ const Question = ({content, index, handleNext}) => {
                 categories: {
                     ...v.categories,
                     [category]: categoryValue,
+                    // answers
                 }
             }
         })
@@ -66,7 +67,6 @@ const Question = ({content, index, handleNext}) => {
             <div className="bg-number--big">
                 { questionNumber() }
             </div>
-            <PreviousButton previousQuestion={previousQuestion}/>
             <div className="questions-body">
                 <div className="category-name">
                     { question.category }
