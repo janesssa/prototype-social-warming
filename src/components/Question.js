@@ -45,7 +45,7 @@ const Question = ({content, index, handleNext}) => {
                 categories: {
                     ...v.categories,
                     [category]: categoryValue,
-                    // answers
+                    answers
                 }
             }
         })
