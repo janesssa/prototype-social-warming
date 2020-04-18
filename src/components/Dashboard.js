@@ -1,7 +1,9 @@
 import React from "react";
 import Webcam from "react-webcam";
+import { ValueContext } from "../context/ValueContext";
 
 const Dashboard = ({handleNext}) => {
+    const 
     return (
         <div className='flex-container'>
             <div className='sm-container'>
