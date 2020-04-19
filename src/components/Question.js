@@ -10,17 +10,11 @@ const Question = ({content, index, handleNext}) => {
     const questionIndex = index + 1
 
     const [selected, setSelected] = useState(false)
-    const [length, setLength] = useState(0)
     
-    const {value, setValue} = useContext(ValueContext)
+    const {setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
 
-    // console.log(question.answers)
     const refs = useRef(question.answers.map(() => createRef()))
-
-    useEffect(() => {
-        
-    }, [length])
 
     const toggleSelected = (i, v, c, cn) => {
         if(refs.current[i]){
@@ -33,7 +27,7 @@ const Question = ({content, index, handleNext}) => {
                     }
                 })
                 setSelected(true)
-                setPreValue({ value: v, category: c, answer: i,})
+                setPreValue({ value: v*1.7, category: c, answer: i,})
             } 
         }
     }
@@ -51,14 +45,13 @@ const Question = ({content, index, handleNext}) => {
                 categories: {
                     ...v.categories,
                     [category]: categoryValue,
-                // answers : answers
+                    answers
                 }
             }
         })
         refs.current.map(ref => {
             const classList = ref.current.classList
             if(classList.contains('answer-img')) {
-                // console.log('remove img clas')
                 classList.remove("answer-img--active")
             } else {
                 classList.remove("answer--active")
@@ -67,26 +60,13 @@ const Question = ({content, index, handleNext}) => {
         handleNext()
     }
 
-    const previousQuestion = () => {
-        // setCurrentQuestion(currentQuestion - 1)
-        // if (currentQuestion === 1) {
-        //     window.location.href = "/";
-        // }
-        // else if (!((currentQuestion-1) in categoryObject.questions)) {
-        //     setCurrentCategory(currentCategory - 1)
-        // }
-    }
-
-    const questionNumber = () => {
-        return questionIndex < 10 ? '0' + questionIndex : questionIndex
-    }
+    const questionNumber = () => questionIndex < 10 ? '0' + questionIndex : questionIndex
 
     return (
         <div className='questions'>
             <div className="bg-number--big">
                 { questionNumber() }
             </div>
-            <PreviousButton previousQuestion={previousQuestion}/>
             <div className="questions-body">
                 <div className="category-name">
                     { question.category }
