@@ -84,7 +84,7 @@ export const questions = [
         ],                  
     },
     {
-        question: 'Heb je afgelopen nacht lekker geslapen? ',
+        question: 'Heb je afgelopen nacht lekker geslapen?',
         category: 'Slaap',
         imgAnswers: false,
         answers: [
@@ -103,7 +103,7 @@ export const questions = [
         ],                    
     },
     {
-        question: 'Wat is je favorite slaaphouding',
+        question: 'Wat is je favorite slaaphouding?',
         category: 'Slaap',
         imgAnswers: true,
         answers: [
@@ -150,7 +150,7 @@ export const questions = [
         ],                    
     },
     {
-        question: 'Hoe sport jij het liefst',
+        question: 'Hoe sport jij het liefst?',
         category: 'Sport',
         imgAnswers: true,
         answers: [
@@ -236,9 +236,10 @@ export const questions = [
     },
 ]
 
-export const results = [
+export  const results = [
     {
-        title: 'Vraag 1',
+        id: 736,
+        title: 'Laat je graag eten thuis bezorgen?',
         category: 'Eten',
         content: [
             'In de regel is uit eten gaan slecht voor de gezondheid. Over het algemeen is het voedsel dat je kan bestellen minder ‘gezond’. Wat uiteindelijk kan leiden tot een verhoogde kans op cholesterol en hartproblemen. Deze link leg je niet direct, maar die is er zeker statistisch gezien. Zo kan iets vrij onschuldigs als eten bestellen een groot effect hebben.',
@@ -247,7 +248,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 2',
+        id: 841,
+        title: 'Wat zie je tijdens een feestje het liefst op tafel staan?',
         category: 'Eten',
         content: [
             'Groenten en fruit ondersteunen het immuunsysteem en behouden de gezondheid. Door een ‘gezond’ eetpatroon te hebben houd je het risico op gezondheidsproblemen gerelateerd aan je voeding laag. Wat positief uitvalt voor een verzekering van de toekomst.',
@@ -256,7 +258,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 3',
+        id: 267,
+        title: 'Welke beleg jij het liefst?',
         category: 'Eten',
         content: [
             'Vezels kunnen veelvoorkomende spijsverteringsklachten  zoals diarree of verstopping, voorkomen of verminderen. Maar daar blijft het niet bij. Zo kunnen vezels daarnaast het risico op darmkanker verlagen. Vezels zijn het lievelingskostje van onze goede darmbacteriën.',
@@ -265,7 +268,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 4',
+        id: 745,
+        title: 'Heb je afgelopen nacht lekker geslapen?',
         category: 'Slaap',
         content: [
             'Een goede nachtrust is de basis van een gezond leven. Naast de ‘voelbare’ kant: energiek, uitgerust, productief etc. Zijn er dus ook veel onderliggende voordelen. Veel ziektes en andere kwaaltjes kunnen teruggeleid worden naar een (regelmatige en langdurige) slechte nachtrust. Als jij vandaag zegt dat je goed hebt geslapen is de momentopname eigenlijk niet waardevol maar wel de input die je geeft op dat moment. Wat leidt tot  een positief assesment.',
@@ -274,7 +278,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 5',
+        id: 451,
+        title: 'Wat is je favorite slaaphouding?',
         category: 'Slaap',
         content: [
             'Buikslapers hebben het zwaar. Letterlijk. Onderzoek wijst uit dat slapen op je buik een last is voor de wervelkolom. Ook wordt de nek niet goed ondersteund in deze positie. Wat dus kan leiden tot kosten om deze problemen te verhelpen. Op de lange termijn kan de schade zelfs onomkeerbaar zijn.',
@@ -283,7 +288,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 6',
+        id: 348,
+        title: 'Beschouw je jezelf als blessure gevoelig?',
         category: 'Sport',
         content: [
             'Blessures zijn naar. Niet alleen voor degene die ze oploopt maar ook voor de sleur van het medisch circuit. Bij een zware blessure is dit vaak een traject dat tot wel een jaar kan duren bij de meeste gevallen. Wat uiteindelijk een uitgebreide kostenpost  is voor de verzekering. Dit risico willen ze natuurlijk het liefst voorkomen.',
@@ -292,7 +298,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 7',
+        id: 663,
+        title: 'Hoe sport jij het liefst?',
         category: 'Sport',
         content: [
             'Thuis op de bank, regelmatige beweging is van groot belang. Niet alleen voor het risico op (toekomstige) lichamelijke klachten, maar ook voor de mentale kant van het verhaal. Beweging laat stofjes los, we kunnen onze (negatieve) energie kwijt en ervaren vaak een betere nachtrust. Door dit niet te doen kan je op termijn mentale en fysieke gezondheidsklachten oplopen. ',
@@ -301,7 +308,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 8',
+        id: 46,
+        title: 'Rook je wel eens?',
         category: 'Overige',
         content: [
             'We weten allemaal hoe slecht roken voor je is. Er zijn verschillende longaandoeningen, maar ook andere ziektes die sterk gelinked kunnen worden aan het (frequent roken) van tabak. Ook is de directe conditionele impact direct merkbaar. Een groot risico voor verzekeraars.',
@@ -310,7 +318,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 9',
+        id: 564,
+        title: 'Doe je weleens een drankje?',
         category: 'Overige',
         content: [
             'Het regelmatig consumeren van alcohol brengt verschillende complicaties met zich mee. Verslavingskans, bloeddruk, leverproblemen etc. Allemaal vanzelfsprekend dat deze zo veel mogelijk vermeden willen worden.',
@@ -319,7 +328,8 @@ export const results = [
         ]
     },
     {
-        title: 'Vraag 10',
+        id: 645,
+        title: 'Ga jij regelmatig met vrienden of kennissen iets leuks doen?',
         category: 'Overige',
         content: [
             'Wanneer men langere periodes zonder uitgebreidere sociale interactie gaat kan dit van invloed zijn op de mentale gesteldheid. Wat vervolgens kan leiden tot zaken als depressie en sociale angst. Dit klinkt vrij drastisch, echter is in theorie hoe dit zou kunnen verlopen. Dus als jij liever dingen alleen doet vorm je volgens de verzekering van de toekomst al een iets groter risico.',

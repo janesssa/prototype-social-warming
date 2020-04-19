@@ -19,7 +19,6 @@ const InsightCard = ({ content, answer }) => {
     const imageProps = useSpring({ height: isActive ? "200px" : "1px"});
     const contentProps = useSpring({ width: isActive ? "760px" : "960px" });
     const parProps = useSpring({ opacity: isActive ? "1" : "0", height: isActive ? "200px" : "1px" });
-    let icon
 
     const toggleAccordion = () => {
         if (isActive) {
@@ -28,23 +27,29 @@ const InsightCard = ({ content, answer }) => {
             setActiveTab(content.id);
         }
     };
-        if (content.category === 'Eten') {
-            icon = <CulteryIcon w={height/2} h={height/2} />
-        } else if (content.category === 'Slaap') {
-            icon = <SleepIcon w={height/2} h={height/2} />
-        } else if (content.category === 'Sport') {
-            icon = <SportIcon w={height/2} h={height/2} />
-        } else {
-            icon = <BrainIcon w={height/2} h={height/2} />
+
+    const getIcon = (category) => {
+        switch (category) {
+            case 'Eten': 
+                return <CulteryIcon w={height/2} h={height/2} />
+            case 'Slaap': 
+                return <SleepIcon w={height/2} h={height/2} />
+            case 'Sport': 
+                return <SportIcon w={height/2} h={height/2} />
+            case 'Overige': 
+                return <BrainIcon w={height/2} h={height/2} />
+            default:
+                return <BrainIcon w={height/2} h={height/2} />
         }
+    }
+    
     return (
         <div className="md-card">
             <animated.div className="center-icon" style={imageProps} ref={bind}>
-                {/* Todo: Switch voor verschillende Icons */}
-                {icon}
+                {getIcon(content.category)}
             </animated.div>
             <animated.div className="card-content" style={contentProps}>
-                <animated.small>Categorie</animated.small>
+                <animated.small>{content.category}</animated.small>
                 <animated.h6 className="card-title">{content.title}</animated.h6>
                 <animated.p style={parProps}>{content.content[answer]}</animated.p>
             </animated.div>

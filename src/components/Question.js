@@ -10,7 +10,7 @@ const Question = ({content, index, handleNext}) => {
 
     const [selected, setSelected] = useState(false)
     
-    const {value, setValue} = useContext(ValueContext)
+    const {setValue} = useContext(ValueContext)
     const {preValue, setPreValue} = useContext(PreValueContext)
 
     const refs = useRef(question.answers.map(() => createRef()))
