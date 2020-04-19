@@ -35,18 +35,18 @@ const Question = ({content, index, handleNext}) => {
     const handleSubmit = () => {
         let pa = preValue.value
         let category = preValue.category
+        let answer = preValue.answer
         setValue((v) => {
             // The value of the answer will get added to the category times 3
             let categoryValue = v.categories[category] ? v.categories[category] + (pa*3) : pa*3
-            let answers = v.answers.push(preValue.answer)
             return {
                 ...v,
                 value: v.value + pa,
                 categories: {
                     ...v.categories,
                     [category]: categoryValue,
-                    answers
-                }
+                },
+                answers: [...v.answers, answer]
             }
         })
         refs.current.map(ref => {
