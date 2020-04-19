@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import useMeasure from "react-use-measure";
 import CulteryIcon from "../assets/CulteryIcon"
+import SleepIcon from "../assets/SleepIcon"
+import SportIcon from "../assets/SportIcon"
+import BrainIcon from "../assets/BrainIcon"
+
 import "../styles/results.scss";
 
 const InsightCard = ({ content, answer }) => {
@@ -15,6 +19,7 @@ const InsightCard = ({ content, answer }) => {
     const imageProps = useSpring({ height: isActive ? "200px" : "1px"});
     const contentProps = useSpring({ width: isActive ? "760px" : "960px" });
     const parProps = useSpring({ opacity: isActive ? "1" : "0", height: isActive ? "200px" : "1px" });
+    let icon
 
     const toggleAccordion = () => {
         if (isActive) {
@@ -23,11 +28,20 @@ const InsightCard = ({ content, answer }) => {
             setActiveTab(content.id);
         }
     };
+        if (content.category === 'Eten') {
+            icon = <CulteryIcon w={height/2} h={height/2} />
+        } else if (content.category === 'Slaap') {
+            icon = <SleepIcon w={height/2} h={height/2} />
+        } else if (content.category === 'Sport') {
+            icon = <SportIcon w={height/2} h={height/2} />
+        } else {
+            icon = <BrainIcon w={height/2} h={height/2} />
+        }
     return (
         <div className="md-card">
             <animated.div className="center-icon" style={imageProps} ref={bind}>
                 {/* Todo: Switch voor verschillende Icons */}
-                <CulteryIcon w={height/2} h={height/2} />
+                {icon}
             </animated.div>
             <animated.div className="card-content" style={contentProps}>
                 <animated.small>Categorie</animated.small>

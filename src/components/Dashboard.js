@@ -10,7 +10,7 @@ const Dashboard = ({handleNext}) => {
                 <p className='bg-number'>€{value.value}</p>
                 <h1>Dit ben jij</h1>
                 <p>Maar eigenlijk ook veel meer dan alleen jij. Dit is hoe (toekomstige) verzekeringsmaatschappijen jou zien. Als data. Wat eigenlijk nog interessanter is, is wat ze hier uit afleiden.</p>
-                <div className='button button-margin'> <a>Wat betekent dit? </a></div>
+                <div className='button button-margin' onClick={() => handleNext()}>Wat betekent dit?</div>
             </div> 
 
             <div className="camResults">
