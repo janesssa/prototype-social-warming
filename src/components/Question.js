@@ -99,7 +99,7 @@ const Question = ({content, index, handleNext}) => {
                 <div className="next">
                     <small>Één antwoord mogelijk</small>
                     {/* Todo: Style button when disabled */}
-                    <button className="button button--small button--red" onClick={() => handleSubmit()} disabled={!selected}>
+                    <button className="html-button" onClick={() => handleSubmit()} disabled={!selected}>
                         Volgende
                     </button>
                 </div>
