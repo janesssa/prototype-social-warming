@@ -7,7 +7,7 @@ const Dashboard = ({handleNext}) => {
     return (
         <div className='flex-container'>
             <div className='sm-container'>
-                <p className='bg-number'>€{value.value}</p>
+                <p className='bg-number'>€{value.value.toFixed(2)}</p>
                 <h1>Dit ben jij</h1>
                 <p>Maar eigenlijk ook veel meer dan alleen jij. Dit is hoe (toekomstige) verzekeringsmaatschappijen jou zien. Als data. Wat eigenlijk nog interessanter is, is wat ze hier uit afleiden.</p>
                 <div className='button button-margin' onClick={() => handleNext()}>Wat betekent dit?</div>

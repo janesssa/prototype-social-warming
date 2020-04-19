@@ -59,6 +59,9 @@ body, html, .lg-container {
 //styling for <button> element
 .html-button{
   border: none;
+  &:disabled {
+    background-color: $lightGrey;
+  }
 }
 
 .html-button, .button {

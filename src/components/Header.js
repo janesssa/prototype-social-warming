@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../styles/results.scss";
-import { PreValueContext, ValueContext } from "../context/ValueContext";
 
-const Header = ({ text, style, handleNext}) => {
-  const {preValue, setPreValue} = useContext(PreValueContext)
-  const {value, setValue} = useContext(ValueContext)
+const Header = ({ text, style }) => {
   return (
     <>
       <div className="header">
         <h3>product naam</h3>
-        <small onClick={() => handleNext()}>{text}</small>
+        <small>{text}</small>
       </div>
       <div className="progressbar">
         <div className="inner-progressbar" style={style}></div>

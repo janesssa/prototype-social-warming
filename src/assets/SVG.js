@@ -21,7 +21,7 @@ const SVG = ({
         <path 
             d={d}
             fill={fp}
-            fill-opacity={fo}
+            fillOpacity={fo}
         />
     </svg>
     )

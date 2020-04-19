@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext, useRef, createRef} from 'react'
+import React, { useState, useContext, useRef, createRef} from 'react'
 import Logo from './Logo.js'
 import Image from "../assets/Image"
 import '../styles/questions.scss';
-import PreviousButton from '../assets/PreviousButton.js';
 import { PreValueContext, ValueContext } from '../context/ValueContext'
 
 const Question = ({content, index, handleNext}) => {
@@ -35,18 +34,18 @@ const Question = ({content, index, handleNext}) => {
     const handleSubmit = () => {
         let pa = preValue.value
         let category = preValue.category
+        let answer = preValue.answer
         setValue((v) => {
             // The value of the answer will get added to the category times 3
             let categoryValue = v.categories[category] ? v.categories[category] + (pa*3) : pa*3
-            let answers = v.answers.push(preValue.answer)
             return {
                 ...v,
                 value: v.value + pa,
                 categories: {
                     ...v.categories,
                     [category]: categoryValue,
-                    answers
-                }
+                },
+                answers: [...v.answers, answer]
             }
         })
         refs.current.map(ref => {
@@ -57,6 +56,7 @@ const Question = ({content, index, handleNext}) => {
                 classList.remove("answer--active")
             }
         })
+        setSelected(false)
         handleNext()
     }
 
@@ -87,6 +87,7 @@ const Question = ({content, index, handleNext}) => {
                             />
                         ) : (
                             <div
+                                key={index}
                                 ref={refs.current[index]}
                                 onClick={() => toggleSelected(index, answer.value, question.category, "answer--active")}
                                 className='answer'
