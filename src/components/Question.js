@@ -56,6 +56,7 @@ const Question = ({content, index, handleNext}) => {
                 classList.remove("answer--active")
             }
         })
+        setSelected(false)
         handleNext()
     }
 
