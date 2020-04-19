@@ -188,11 +188,7 @@ export const questions = [
             },
             {
                 answer: 'Ik rook af en toe een sigaretje.',
-                value: 3.3
-            },
-            {
-                answer: 'Ik heb ooit een sigaretje gerookt.',
-                value: 6.6
+                value: 5
             },
             {  
                 answer: 'Ik rook niet.',
@@ -211,11 +207,7 @@ export const questions = [
             },
             {
                 answer: 'Op z’n tijd. Als we allemaal vrij hebben.',
-                value: 3.3
-            },
-            {
-                answer: 'Echt heel sporadisch..',
-                value: 6.6
+                value: 5
             },
             {
                 answer: 'k drink geen alcohol, doe maar ice tea.',
@@ -233,19 +225,11 @@ export const questions = [
                 value: 0
             },
             {
-                answer: 'Eens in de maand gaan we er op uit.',
-                value: 2.5
-            },
-            {
                 answer: 'Bijna elke week staat er wel iets op de planning.',
                 value: 5
             },
             {
                 answer: 'We zien elkaar meerdere keren per week.',
-                value: 7.5
-            },
-            {
-                answer: 'We zien elkaar (semi-)dagelijks.',
                 value: 10
             },
         ],                    
