@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext, useRef, createRef} from 'react'
+import React, { useState, useContext, useRef, createRef} from 'react'
 import Logo from './Logo.js'
 import Image from "../assets/Image"
 import '../styles/questions.scss';
-import PreviousButton from '../assets/PreviousButton.js';
 import { PreValueContext, ValueContext } from '../context/ValueContext'
 
 const Question = ({content, index, handleNext}) => {
@@ -45,8 +44,8 @@ const Question = ({content, index, handleNext}) => {
                 categories: {
                     ...v.categories,
                     [category]: categoryValue,
-                    answers
-                }
+                },
+                answers
             }
         })
         refs.current.map(ref => {

@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../styles/results.scss";
-import { PreValueContext, ValueContext } from "../context/ValueContext";
 
 const Header = ({ text, style, handleNext}) => {
-  const {preValue, setPreValue} = useContext(PreValueContext)
-  const {value, setValue} = useContext(ValueContext)
   return (
     <>
       <div className="header">

@@ -116,7 +116,7 @@ const Results = () => {
                 <h1 className='title'>Jouw data, ons inzicht</h1>
                 <span className='float-right'>
                     <small>Jouw data waarde</small>
-                    <span className='bg-number'>€{value.value}</span> 
+                    <span className='bg-number'>€{value.value.toFixed(2)}</span> 
                 </span>
             </div>
             <div className='carousel'>

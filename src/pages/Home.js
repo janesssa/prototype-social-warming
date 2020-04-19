@@ -6,13 +6,13 @@ const Home = ({content, handleNext}) => {
     return (
         <div className='home'>
             <Logo />
-            <div class="home-content">
+            <div className="home-content">
                 <div className="title title--red">
                     {content.title}
                 </div>
                 <div className="body">
                     {content.content.map((block, i) => (
-                        <p>
+                        <p key={i}>
                             {block}
                         </p>
                     ))}
