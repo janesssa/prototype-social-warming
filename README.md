@@ -5,7 +5,7 @@ This project is created to show these users what can happen behind the screen.
 
 ## Check out our project
 
-Feel free to chech out our project on: https://prototype-social-warming.netlify.app/
+Feel free to check out our project [here](https://prototype-social-warming.netlify.app/)
 
 Or download/clone the project.
 in the project directory, you can run:
