@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import useMeasure from "react-use-measure";
+import { ResizeObserver } from '@juggle/resize-observer'
 import CulteryIcon from "../assets/CulteryIcon"
 import SleepIcon from "../assets/SleepIcon"
 import SportIcon from "../assets/SportIcon"
@@ -12,7 +13,7 @@ const InsightCard = ({ content, answer }) => {
     const [activeTab, setActiveTab] = useState();
     const isActive = activeTab === content.id;
 
-    const [bind, {height}] = useMeasure()
+    const [bind, {height}] = useMeasure({ polyfill: ResizeObserver })
 
     const arrowProps = useSpring({transform: isActive ? "rotate(-135deg)" : "rotate(135deg)"});
     const mdCardProps = useSpring({ height: isActive ? "200px" : "50px" });
@@ -51,7 +52,7 @@ const InsightCard = ({ content, answer }) => {
             <animated.div className="card-content" style={contentProps}>
                 <animated.small>{content.category}</animated.small>
                 <animated.h6 className="card-title">{content.title}</animated.h6>
-                <animated.p style={parProps}>{content.content[answer]}</animated.p>
+                <animated.p style={parProps} data-testid="results-par">{content.content[answer]}</animated.p>
             </animated.div>
             <animated.div
                 className="arrow"

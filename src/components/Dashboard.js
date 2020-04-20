@@ -42,10 +42,19 @@ function returnWordArray(category, value){
     }
 }
 
+export const PersonalWord = ({word, index}) => {
+    const className = `camResults${index === 0 ? '' : ' camRes' + (index + 1)}`
+    return (
+        <div className={className}>
+            <p>{word}</p>
+            <span className="line"> </span>    
+        </div> 
+    )
+}
+
 const Dashboard = ({handleNext}) => {
     const {value} = useContext(ValueContext)
     var personalWord = Object.keys(value.categories).map(el => { 
-            console.log(el)
             return returnWordArray(el, value.categories[el])
         })
 
@@ -57,26 +66,9 @@ const Dashboard = ({handleNext}) => {
                 <p>Maar eigenlijk ook veel meer dan alleen jij. Dit is hoe (toekomstige) verzekeringsmaatschappijen jou zien. Als data. Wat eigenlijk nog interessanter is, is wat ze hier uit afleiden.</p>
                 <div className='button button-margin' onClick={() => handleNext()}>Wat betekent dit?</div>
             </div> 
-
-            <div className="camResults">
-                <p>{personalWord[0]}</p>
-                <span className="line"> </span>    
-            </div> 
-
-            <div className="camResults camRes2">
-                <p>{personalWord[1]}</p>
-                <span className="line"> </span>    
-            </div> 
-
-            <div className="camResults camRes3">
-                <p>{personalWord[2]}</p>
-                <span className="line"> </span>    
-            </div> 
-
-            <div className="camResults camRes4">
-                <p>{personalWord[3]}</p>
-                <span className="line"> </span>    
-            </div> 
+            {personalWord.map((word, i) => (
+                <PersonalWord word={word} index={i} key={i} /> 
+            ))}
             <Webcam />
         </div>
     )
