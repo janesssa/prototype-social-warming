@@ -44,12 +44,10 @@ function returnWordArray(category, value){
 
 const Dashboard = ({handleNext}) => {
     const {value} = useContext(ValueContext)
-    var personalWord = Object.keys(value.categories).map(
-        el => { 
+    var personalWord = Object.keys(value.categories).map(el => { 
             console.log(el)
             return returnWordArray(el, value.categories[el])
-        }
-    )
+        })
 
     return (
 
