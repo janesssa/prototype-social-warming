@@ -50,7 +50,6 @@ const Dashboard = ({handleNext}) => {
         })
 
     return (
-
         <div className='flex-container'>
             <div className='sm-container'>
                 <p className='bg-number'>€{value.value}</p>
