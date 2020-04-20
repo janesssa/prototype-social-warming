@@ -12,7 +12,7 @@ function returnWordArray(category, value){
     switch(category){
         case "Sport": 
             if(value < value/2 ){
-                return arraySport[0];
+               return arraySport[0];
             }else{
                 return arraySport[1];
             }
