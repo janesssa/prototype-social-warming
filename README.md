@@ -19,3 +19,7 @@ in the project directory, you can run:
 * [Janessa]( https://github.com/janesssa ) 
 * [Zoe]( https://github.com/Sweetpurple616 ) 
 * [Rachelle]( https://github.com/rachellebosman ) 
+
+## Design by 
+* [Coen](https://nl.linkedin.com/in/coen-van-pelt) 
+* [Johnathan]( https://nl.linkedin.com/in/jonathan-van-arkel-3a6b35157 ) 
