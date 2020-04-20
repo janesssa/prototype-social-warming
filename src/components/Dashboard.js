@@ -43,7 +43,7 @@ function returnWordArray(category, value){
 }
 
 export const PersonalWord = ({word, index}) => {
-    const className = `camResults${index === 0 ? '' : 'camRes' + (index + 1)}`
+    const className = `camResults${index === 0 ? '' : ' camRes' + (index + 1)}`
     return (
         <div className={className}>
             <p>{word}</p>
