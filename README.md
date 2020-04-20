@@ -3,7 +3,7 @@
 A lot of people these days fill in their personal information on the internet.
 This project is created to show these users what can happen behind the screen. 
 
-## Check out out project
+## Check out our project
 
 Feel free to chech out our project on: https://prototype-social-warming.netlify.app/
 
