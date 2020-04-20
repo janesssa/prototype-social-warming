@@ -13,15 +13,13 @@ function returnWordArray(category, value){
         case "Sport": 
             if(value < value/2 ){
                 return arraySport[0];
-            }
-            else{
+            }else{
                 return arraySport[1];
             }
         case "Slaap":
             if(value < value/2 ){
                 return arraySlapen[0];
-            }
-            else{
+            }else{
                 return arraySlapen[1];
             }
         case "Eten":
@@ -30,15 +28,13 @@ function returnWordArray(category, value){
             }
             if(value < value*(0.66 * 100) ){
                return arrayEten[1];
-            }
-            else{
+            }else{
                return arrayEten[2];
             }
         case "Overige":
             if(value < value/2 ){
                return arrayOverig[0]
-            }
-            else{
+            }else{
                return arrayOverig[1]
             } 
         default: 
