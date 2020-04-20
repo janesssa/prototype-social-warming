@@ -135,9 +135,10 @@ small {
   background-color: $mainColor;
   color: $white; 
   height: 28px;
-  padding: 0 10px;
+  padding: 5px 30px;
   margin-top: 50px; 
   margin-left: -100px;
+  border-radius: 5px;
 }
 
 .line{
@@ -148,13 +149,6 @@ small {
   background-color: $mainColor;
   position: absolute;
   transform: rotate(300deg);
-}
-
-.line::after{
-  position: absolute;
-  background-color: $mainColor;
-  width: 50px;
-  height: 50px; 
 }
 
 .camRes2{

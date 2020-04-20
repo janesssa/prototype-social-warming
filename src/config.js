@@ -15,7 +15,7 @@ export const questions = [
         answers: [
             {
                 answer: 'Zeker, het liefst zou ik elke dag bestellen!',
-                value: 0
+                value: 1
             },
             {
                 answer: 'Ja, maar dan alleen een gezonde poké bowl of salade.',
@@ -40,7 +40,7 @@ export const questions = [
                     }
             },
             {
-                value: 0,
+                value: 1,
                 img: {
                     src: '/assets/img/questions/Q2A2.png',
                     alt: 'Een plank fruit en brood',
@@ -75,7 +75,7 @@ export const questions = [
                     }
             },
             {
-                value: 0,
+                value: 1,
                 img: {
                     src: '/assets/img/questions/Q3A3.png',
                     alt: 'Witbrood',
@@ -94,7 +94,7 @@ export const questions = [
             },
             {
                 answer: 'Nee, was niet mijn beste nacht.',
-                value: 0
+                value: 1
             },
             {
                 answer: 'Niet anders dan anders.',
@@ -108,7 +108,7 @@ export const questions = [
         imgAnswers: true,
         answers: [
             {
-                value: 0,
+                value: 1,
                 img: {
                     src: '/assets/img/questions/Q5A1.png',
                     alt: 'Buik',
@@ -137,7 +137,7 @@ export const questions = [
         answers: [
             {
                 answer: 'Ik heb een (zware) blessure (gehad).',
-                value: 0
+                value: 1
             },
             {
                 answer: 'Ik ga weleens naar de fysio',
@@ -169,7 +169,7 @@ export const questions = [
                     }
             },
             {
-                value: 0,
+                value: 1,
                 img: {
                     src:  '/assets/img/questions/Q7A3.png',
                     alt: 'Op de bank gamen',
@@ -184,7 +184,7 @@ export const questions = [
         answers: [
             {
                 answer: 'Ja ik ben een frequente roker.',
-                value: 0
+                value: 1
             },
             {
                 answer: 'Ik rook af en toe een sigaretje.',
@@ -203,7 +203,7 @@ export const questions = [
         answers: [
             {
                 answer: 'Ik ga regelmatig drinken met de maten.',
-                value: 0
+                value: 1
             },
             {
                 answer: 'Op z’n tijd. Als we allemaal vrij hebben.',
@@ -222,7 +222,7 @@ export const questions = [
         answers: [
             {
                 answer: 'Eigenlijk doe ik liever in m’n eentje dingen.',
-                value: 0
+                value: 1
             },
             {
                 answer: 'Bijna elke week staat er wel iets op de planning.',
